@@ -45,3 +45,32 @@ int main()
 	printf("The Result of %.2f %c %.2f = %.2f", num1, operator, num2, result);
 	return 0;
 
+
+
+#include<stdio.h>
+
+int main()
+{
+    int num1, num2, sum;
+    int* ptr1, * ptr2;
+
+    printf("Enter any two Number: ");
+    scanf("%d%d", &num1, &num2);
+
+    printf("\nAddress of %d is %p", num1, &num1);
+    printf("\nAddress of %d is %p", num2, &num2);
+
+    ptr1 = &num1;
+    ptr2 = &num2;
+
+    printf("\n\nptr1 = %p", ptr1);
+    printf("\nptr2 = %p", ptr2);
+
+    printf("\n\nValue at %p is %d", ptr1, *ptr1);
+    printf("\nValue at %p is %d", ptr2, *ptr2);
+
+    sum = *ptr1 + *ptr2;
+    printf("\n\nSum of %d and %d is %d", *ptr1, *ptr2, sum);
+    getch();
+    return 0;
+}
